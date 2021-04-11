@@ -1,0 +1,62 @@
+.clients {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.clients-list {
+  @extend %flex-container;
+  justify-content: space-between;
+  min-width: 1170px;
+
+  &__link {
+    @extend %flex-container;
+    justify-content: center;
+    width: 170px;
+    height: 90px;
+    /*border: 1px solid #afb1b8;
+  border-radius: 4px;*/
+  }
+  &__item {
+    border: 1px solid #afb1b8;
+    border-radius: 4px;
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover,
+    &:focus {
+      border: 1px solid var(--acent-color);
+    }
+  }
+  &__icon-one {
+    width: 44px;
+    height: 49px;
+  }
+  &__icon-two {
+    width: 40px;
+    height: 52px;
+  }
+  &__icon-three {
+    width: 41px;
+    height: 43px;
+  }
+  &__icon-four {
+    width: 80px;
+    height: 42px;
+  }
+  &__icon-five {
+    width: 59px;
+    height: 47px;
+  }
+  &__icon-six {
+    width: 88px;
+    height: 45px;
+  }
+}
+
+.common {
+  fill: #afb1b8;
+  transition: var(--animate-icon);
+
+  .clients-list__link:hover &,
+  .clients-list__link:focus & {
+    fill: var(--acent-color);
+  }
+}

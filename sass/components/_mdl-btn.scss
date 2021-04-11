@@ -1,0 +1,29 @@
+.modal-btn {
+  display: inline-block;
+  text-align: center;
+  min-width: 200px;
+  padding: 10px 32px 10px 32px;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.8;
+  letter-spacing: 0.06em;
+  color: #ffffff;
+  cursor: pointer;
+  background-color: #188ce8;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: none;
+  /*outline: none;*/
+  transition: var(--animate-button);
+
+  .modal-form & {
+    align-self: center;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: #2196f3;
+    color: #ffffff;
+  }
+}

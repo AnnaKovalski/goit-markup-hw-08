@@ -148,3 +148,9 @@
 .check-link {
   color: var(--acent-color);
 }
+@media screen and (min-width: 480px) {
+  .modal-form-check-desc {
+    font-size: 12px;
+    line-height: 1.16;
+  }
+}

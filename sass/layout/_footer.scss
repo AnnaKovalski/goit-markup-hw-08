@@ -1,83 +1,96 @@
 .footer {
   padding-top: 60px;
   padding-bottom: 60px;
-  background-color: #2f303a;
+  background: var(--brand-color);
 }
-.address-list {
-  /*display: flex;*/
-  flex-direction: column;
-  justify-content: space-between;
+.footer__container {
+  display: block;
+  align-items: baseline;
+}
+.footer-wraper {
+  margin-bottom: 60px;
+  text-align: center;
+}
+.logo {
+  margin-bottom: 20px;
+  display: inline-block;
+}
+.address-list__item:not(:last-child) {
+  margin-bottom: 8px;
+}
+.location {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.7;
+  letter-spacing: 0.03em;
+  color: #ffffff;
+}
+.address-list__link {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.7;
+  letter-spacing: 0.03em;
+}
 
-  &__link {
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 1.7;
-    letter-spacing: 0.03em;
-    color: rgba(255, 255, 255, 0.6);
-  }
-  &__item {
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 1.7;
-    letter-spacing: 0.03em;
-    color: #ffffff;
-    &:not(:last-child) {
-      margin-bottom: 9px;
-    }
-  }
-}
-
-.footer-wraper:not(:last-child) {
-  margin-right: 70px;
-}
 .invitation {
-  text-transform: uppercase;
-  font-weight: 500;
+  text-align: center;
+  display: block;
+  margin-bottom: 20px;
+  font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
+  text-transform: uppercase;
   color: #ffffff;
-  margin-bottom: 20px;
 }
 .social-media {
-  justify-content: none;
-  min-width: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   &__item:not(:last-child) {
     margin-right: 10px;
   }
   &__link {
-    background-color: rgba(255, 255, 255, 0.1);
-
-    &:hover,
-    &:focus {
-      background-color: var(--acent-color);
-    }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 }
-
 .footer-icon {
   fill: #ffffff;
+  width: 20px;
+  height: 20px;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.footer-form-wraper {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  margin-left: 93px;
-  align-items: baseline;
+.invitation {
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+.sign {
+  text-align: center;
 }
 .sign-email {
-  width: 358px;
-  height: 50px;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
-  border-radius: 4px;
-  background-color: #2f303a;
+  padding-left: 16px;
   color: #ffffff;
-  padding: 16px;
-  margin-right: 12px;
-
+  width: 100%;
+  height: 50px;
+  margin-bottom: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background-color: transparent;
   &::placeholder {
     font-weight: 400;
     font-size: 16px;
@@ -86,9 +99,8 @@
     color: rgba(255, 255, 255, 0.6);
   }
 }
-
 .sign-btn {
-  margin: 0;
+  margin: 0 auto;
   display: flex;
   align-items: center;
   padding: 10px 29px;
@@ -99,10 +111,169 @@
   height: 24px;
   margin-left: 10px;
 }
-.sign {
-  display: flex;
-  justify-content: space-between;
+@media screen and (min-width: 768px) {
+  .footer__container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: center;
+  }
+  .footer__social {
+    margin-left: 165px;
+    padding: 0;
+  }
 }
-.sign-wraper {
-  display: inline-flex;
+@media screen and (min-width: 1200px) {
+  .footer .container {
+    max-width: 1200px;
+  }
+  .contact {
+    text-align: inherit;
+    padding-bottom: 0px;
+  }
+  .logo {
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+  }
+  .address-list__item:not(:last-child) {
+    margin-bottom: 9px;
+  }
+  .footer-social {
+    display: block;
+    padding-bottom: 0px;
+    margin-left: 70px;
+  }
+  .footer-form-wraper {
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+  }
+  .sign-email {
+    width: 358px;
+    margin-bottom: 0px;
+  }
+  .sign-btn {
+    margin-left: 12px;
+  }
+  .sign {
+    display: flex;
+    justify-content: space-between;
+  }
+  .sign-wraper {
+    display: inline-flex;
+  }
+  .invitation {
+    text-align: inherit;
+  }
 }
+// .footer {
+//   padding-top: 60px;
+//   padding-bottom: 60px;
+//   background-color: #2f303a;
+// }
+// .address-list {
+//   /*display: flex;*/
+//   flex-direction: column;
+//   justify-content: space-between;
+
+//   &__link {
+//     font-weight: 400;
+//     font-size: 14px;
+//     line-height: 1.7;
+//     letter-spacing: 0.03em;
+//     color: rgba(255, 255, 255, 0.6);
+//   }
+//   &__item {
+//     font-weight: 400;
+//     font-size: 14px;
+//     line-height: 1.7;
+//     letter-spacing: 0.03em;
+//     color: #ffffff;
+//     &:not(:last-child) {
+//       margin-bottom: 9px;
+//     }
+//   }
+// }
+
+// .footer-wraper:not(:last-child) {
+//   margin-right: 70px;
+// }
+// .invitation {
+//   text-transform: uppercase;
+//   font-weight: 500;
+//   font-size: 14px;
+//   line-height: 1.14;
+//   letter-spacing: 0.03em;
+//   color: #ffffff;
+//   margin-bottom: 20px;
+// }
+// .social-media {
+//   justify-content: none;
+//   min-width: none;
+
+//   &__item:not(:last-child) {
+//     margin-right: 10px;
+//   }
+//   &__link {
+//     background-color: rgba(255, 255, 255, 0.1);
+
+//     &:hover,
+//     &:focus {
+//       background-color: var(--acent-color);
+//     }
+//   }
+// }
+
+// .footer-icon {
+//   fill: #ffffff;
+// }
+
+// .footer-form-wraper {
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: space-between;
+//   margin-left: 93px;
+//   align-items: baseline;
+// }
+// .sign-email {
+//   width: 358px;
+//   height: 50px;
+//   border: 1px solid rgba(255, 255, 255, 0.3);
+//   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+//   border-radius: 4px;
+//   background-color: #2f303a;
+//   color: #ffffff;
+//   padding: 16px;
+//   margin-right: 12px;
+
+//   &::placeholder {
+//     font-weight: 400;
+//     font-size: 16px;
+//     line-height: 1.25;
+//     letter-spacing: 0.03em;
+//     color: rgba(255, 255, 255, 0.6);
+//   }
+// }
+
+// .sign-btn {
+//   margin: 0;
+//   display: flex;
+//   align-items: center;
+//   padding: 10px 29px;
+// }
+// .send-icon {
+//   display: block;
+//   width: 24px;
+//   height: 24px;
+//   margin-left: 10px;
+// }
+// .sign {
+//   display: flex;
+//   justify-content: space-between;
+// }
+// .sign-wraper {
+//   display: inline-flex;
+// }

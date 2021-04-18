@@ -163,7 +163,6 @@ img {
 }
 .footer .logo {
   display: inline-block;
-  margin-bottom: 20px;
 }
 .logo__acent-text {
   color: #2196f3;
@@ -331,7 +330,6 @@ img {
     -ms-flex-pack: justify;
     justify-content: space-between;
     border-bottom: 1px solid #ececec;
-    padding-top: 26px;
     padding-bottom: 0;
   }
   .site-nav {
@@ -456,9 +454,9 @@ img {
   flex-wrap: wrap;
   margin-bottom: 35px;
 }
-.filter-list__item:not(:last-child) {
-  margin-right: 8px;
-  margin-bottom: 15px;
+.filter-list__item {
+  margin-left: 8px;
+  margin-top: 15px;
 }
 .filter-list__btn {
   display: inline-block;
@@ -489,7 +487,7 @@ img {
   color: #ffffff;
 }
 @media screen and (min-width: 768px) {
-  .filter-list {
+  .filter-list .filter-list {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -500,13 +498,23 @@ img {
   }
 }
 @media screen and (min-width: 1200px) {
-  .filter-list {
+  .filter-list .filter-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     margin-bottom: 50px;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
   }
 }
 .portfolio {
   padding-top: 40px;
   padding-bottom: 60px;
+}
+.project__img {
+  display: block;
+  width: 100%;
 }
 .gallery {
   display: -webkit-box;
@@ -773,13 +781,14 @@ img {
     -webkit-box-align: baseline;
     -ms-flex-align: baseline;
     align-items: baseline;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
   }
   .footer__social {
-    margin-left: 165px;
     padding: 0;
+  }
+  .footer-form-wraper {
+    margin-top: 60px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -805,7 +814,6 @@ img {
     margin-left: 70px;
   }
   .footer-form-wraper {
-    margin-left: auto;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -813,6 +821,8 @@ img {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
+    width: 400px;
+    margin-top: 60px;
   }
   .sign-email {
     width: 358px;

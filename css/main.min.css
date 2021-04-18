@@ -176,7 +176,6 @@ img {
 }
 .footer .logo {
   display: inline-block;
-  margin-bottom: 20px;
 }
 .logo__acent-text {
   color: #2196f3;
@@ -579,7 +578,6 @@ img {
     -ms-flex-pack: justify;
     justify-content: space-between;
     border-bottom: 1px solid #ececec;
-    padding-top: 26px;
     padding-bottom: 0;
   }
   .site-nav {
@@ -968,8 +966,8 @@ img {
     margin-top: -30px;
   }
   .team-list__item {
-    -ms-flex-preferred-size: calc(100% / 4 - 30px);
-    flex-basis: calc(100% / 4 - 30px);
+    -ms-flex-preferred-size: calc(100% / 2 - 30px);
+    flex-basis: calc(100% / 2 - 30px);
     margin-left: 30px;
     margin-top: 30px;
   }
@@ -981,6 +979,16 @@ img {
   .team {
     padding-top: 94px;
     padding-bottom: 94px;
+  }
+  .team__item {
+    -ms-flex-preferred-size: calc(100% / 4 - 30px);
+    flex-basis: calc(100% / 4 - 30px);
+    margin-left: 30px;
+    margin-top: 30px;
+  }
+  .team-list {
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
   }
 }
 .clients {
@@ -1255,13 +1263,14 @@ img {
     -webkit-box-align: baseline;
     -ms-flex-align: baseline;
     align-items: baseline;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
   }
   .footer__social {
-    margin-left: 165px;
     padding: 0;
+  }
+  .footer-form-wraper {
+    margin-top: 60px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -1287,7 +1296,6 @@ img {
     margin-left: 70px;
   }
   .footer-form-wraper {
-    margin-left: auto;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1295,6 +1303,8 @@ img {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
+    width: 400px;
+    margin-top: 60px;
   }
   .sign-email {
     width: 358px;
